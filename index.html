@@ -13,6 +13,7 @@
 
 
 <script>
+/*
 (document).ready(function(){
   
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
@@ -32,6 +33,15 @@
     });
   });
 })
+*/
+BRUSHED.listenerMenu = function(){
+And add this little method at the bottom:
+
+    // Fix outside links.
+    $('.linkfix_LogIn a').on('click',function() {           
+        window.location.href = "Swaroop Aradhya Resume.pdf";  // Change This
+});
+
 
 </script>
 
