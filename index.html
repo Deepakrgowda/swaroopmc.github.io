@@ -10,7 +10,41 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="script.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 600, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+  });
+})
+
+</script>
+<script>
+BRUSHED.listenerMenu = function(){
+
+    // Fix outside links.
+    $('.linkfix_LogIn a').on('click',function() {           
+        window.location.href = "Swaroop Aradhya Resume.pdf";  // Change This
+});
+
+
+</script>
 
 
 
